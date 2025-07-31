@@ -1,0 +1,219 @@
+#dialog,
+#dialog-level-2 {
+  top: 13%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+
+  min-width: 436px;
+  width: auto;
+  max-width: 580px;
+
+  max-height: 80vh;
+
+  border: none;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+
+  position: relative;
+}
+
+#form {
+  width: 100%;
+  border: none;
+  padding: 1.5rem;
+  position: relative;
+}
+fieldset {
+  border: none;
+}
+#title {
+  border: none;
+  width: 100%;
+  font-size: 2.3rem;
+  font-weight: 700;
+}
+
+#description {
+  width: 100%;
+  resize: none;
+  min-height: 25px;
+  /* max-height: 100px; */
+  border: none;
+  font-size: 1.5rem;
+  font-family: "Roboto";
+  font-weight: 400;
+}
+
+form *:focus {
+  outline: none;
+}
+
+input[type="date"] {
+  height: 2.8rem;
+  border: 1px solid var(--color-subtle);
+  font-family: "Roboto";
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  padding: 1rem;
+  border-radius: 4px;
+}
+
+.priority-select {
+  height: 2.8rem;
+  border: 1px solid var(--color-subtle);
+  font-family: "Roboto";
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  background-color: transparent;
+  border-radius: 4px;
+  padding-left: 0.6rem;
+}
+.select-priority-low {
+  color: var(--color-priority-low-border);
+}
+.select-priority-medium {
+  color: var(--color-priority-medium-border);
+}
+.select-priority-high {
+  color: var(--color-priority-high-border);
+}
+
+option:hover {
+  background-color: #eeeeee;
+}
+
+input[type="date"]:hover,
+.project-select:hover,
+.priority-select:hover {
+  background-color: #eeeeee;
+}
+
+.form-bottom {
+  border-top: 1px solid var(--color-priority-low-border);
+  padding-top: 2rem;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  background-color: #fff;
+}
+
+.project-select {
+  height: 2.8rem;
+  max-width: 140px;
+  border: 1px solid var(--color-subtle);
+  font-family: "Roboto";
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  background-color: transparent;
+  border-radius: 4px;
+  padding-left: 0.6rem;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.project-select option {
+  max-width: 140px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+#dialog-close {
+  width: 80px;
+  height: 2.8rem;
+  border: none;
+  font-size: 1.6rem;
+  color: var(--color-text-secondary);
+  border-radius: 4px;
+  cursor: pointer;
+}
+#dialog-close:hover {
+  background-color: #e0e0e0;
+  color: #222;
+}
+#form-add-todo,
+#form-add-todo-submit,
+#form-update-todo-submit,
+.add-new-sub-todo-btn,
+#form-delete-submit,
+#form-delete-project-submit,
+#form-restore-submit,
+#form-discard-submit,
+#form-add-project-submit {
+  width: 90px;
+  height: 2.8rem;
+  border: none;
+  background-color: #d1453b;
+  color: var(--color-primary);
+  border-radius: 4px;
+  font-size: 1.6rem;
+  cursor: pointer;
+  margin-left: 1rem;
+}
+#form-add-todo:hover,
+#form-delete-submit:hover,
+#form-delete-project-submit:hover,
+#form-restore-submit:hover,
+#form-update-todo-submit:hover,
+#form-discard-submit:hover,
+#form-add-project-submit:hover {
+  background-color: #b23a32;
+}
+.form-level-2 {
+  display: flex !important;
+  flex-direction: row !important;
+  gap: 1rem;
+}
+h3 {
+  margin-top: 0.5rem;
+  font-size: var(--font-size-regular);
+  color: var(--color-subtle);
+}
+.parent-todo-display {
+  margin-top: 0.5rem;
+  font-size: var(--font-size-regular);
+  color: var(--color-subtle);
+}
+.add-new-sub-todo-btn {
+  width: 150px;
+  margin: 1rem 0 0 0;
+  background-color: transparent;
+  color: var(--color-subtle);
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+  gap: 1rem;
+  padding-left: 0.2rem;
+}
+.add-new-sub-todo-btn:hover {
+  background-color: #eeeeee !important;
+  color: var(--color-text);
+}
+.add-new-sub-todo-btn p {
+  font-size: 1.6rem;
+}
+.add-new-sub-todo-btn i {
+  font-size: 2rem;
+}
+.form-actions {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+.form-top {
+  min-height: 100px;
+}
+
+@media screen and (max-width: 768px) {
+  /* Styles applied when the screen width is 768px or less (e.g., for mobile/tablet) */
+  #dialog,
+  #dialog-level-2 {
+    min-width: 400px;
+    width: auto;
+    max-width: 90%;
+  }
+}
